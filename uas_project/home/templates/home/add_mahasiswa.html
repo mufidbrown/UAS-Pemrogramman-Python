@@ -1,0 +1,66 @@
+<!-- home/templates/home/add_mahasiswa.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Mahasiswa</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">Tambah Mahasiswa</h1>
+
+                <!-- Form for Adding Mahasiswa -->
+                <form method="post" action="{% url 'add_mahasiswa' %}" class="mb-4">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="col-md-6 mb-2">
+                            <label for="{{ form.nama.id_for_label }}" class="form-label">Nama</label>
+                            <input
+                                type="text"
+                                name="nama"
+                                class="form-control"
+                                placeholder="Nama"
+                                required
+                            />
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <label for="{{ form.nim.id_for_label }}" class="form-label">NIM</label>
+                            <input
+                                type="text"
+                                name="nim"
+                                class="form-control"
+                                placeholder="NIM"
+                                required
+                            />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="{{ form.prodi.id_for_label }}" class="form-label">Program Studi</label>
+                            {{ form.prodi }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="{{ form.angkatan.id_for_label }}" class="form-label">Angkatan</label>
+                            {{ form.angkatan }}
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Tambah</button>
+                </form>                
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery (place them at the end of the body to improve page load time) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

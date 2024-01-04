@@ -1,0 +1,51 @@
+<!-- templates/home/index.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang di Aplikasi Mahasiswa</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .jumbotron {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 50px;
+            text-align: center;
+        }
+        .btn-get-started {
+            background-color: #ffffff;
+            color: #007bff;
+            border: 2px solid #007bff;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        .btn-get-started:hover {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1 class="display-4">Selamat Datang di Aplikasi Mahasiswa</h1>
+        <p class="lead">Kelola data mahasiswa dengan mudah menggunakan aplikasi kami.</p>
+        <hr class="my-4">
+        <p>Pelajari cara menggunakan aplikasi atau tambahkan data mahasiswa sekarang!</p>
+        <a class="btn btn-get-started" href="{% url 'mahasiswa_list' %}" role="button">Tambah Mahasiswa</a>
+    </div>
+
+    <!-- Bootstrap JS and jQuery (place them at the end of the body to improve page load time) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
