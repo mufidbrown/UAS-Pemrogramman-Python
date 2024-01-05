@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'users',  # tambahan 05/01/24.
 ]
 
 MIDDLEWARE = [
