@@ -4,7 +4,7 @@
 * Ilham Mufid   : 21.01.4640
 
   
-### Basic Features of The App
+### Fitur Aplikasi
     
 * Register 
 * Login 
